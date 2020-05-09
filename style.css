@@ -39,7 +39,7 @@ body{
 	margin: 10px;
 	padding: 10px;
 	font-family: Quicksand;
-	width: 100%;
+	min-width: 100%;
 }
 #wordToType{
 	background: #e08358;

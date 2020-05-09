@@ -119,11 +119,13 @@ function startType(){
 				}
 				// If submitted word was correct, otherwise wrong
 				if(inputValue == array[iterator]){
-					elem.style.color = "green"
+					elem.style.background = "#69c97c"
+					elem.style.color = "#fff"
 					correctArray.push(inputValue)
 					iterator++
 				}else{ 
-					elem.style.color = "red"
+					elem.style.background = "#c96259"
+					elem.style.color = "#fff"
 					errorArray.push(inputValue)	
 					iterator++ 
 				}	
