@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Typing Test</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Modak&family=Quicksand:wght@500&family=Raleway&display=swap" rel="stylesheet">
+</head>
+<body onload = "timerSelection()">
+
+	<div class ="starter">
+		<div class="modal-content">
+			<div>Select Timer & Story</div>
+			<a href="#" id="minute" class="btn" data-custom-value="60000">1 Minute</a>
+			<a href="#" id="minute" class="btn" data-custom-value="120000">2 Minutes</a>
+			<a href="#" id="minute" class="btn" data-custom-value="3000">3 Minutes</a>	<br>
+<!-- 			<a href="#" class="btn types" id="sentence">Sentence</a>
+			<a href="#" class="btn types" id="word">Word</a> -->
+			<select>
+				<option default id="1">Story 1</option>
+				<option id="2">Story 2</option>
+				<option id="3">Story 3</option>
+			</select>
+		</div>	
+	</div>
+	
+	<div class = "typing-content">
+		<div class ="input-section">
+			<div id ="story"></div>
+			<br>
+			<input type="text" name="input" disabled>
+			<button id="start" disabled>Play</button>	
+		</div>
+		<div class = "info">
+			<p id ="correct">Correct: 0</p>
+			<p id ="error">Errors: 0</p>
+			<p id ="timeLeft">Time Left: </p>
+			<p id ="wordToType">Word: </p>			
+		</div>	
+	</div>
+
+	<div class ="gameover">
+		<div class="modal-content">
+			<!-- text to display when game is over -->
+			<div style="background:#c96259">GameOver</div>
+			<p class="wpm">WPM: </p>
+			<p class="acc">Accuracy: </p>
+			<p class="error">Errors: 0</p>
+		</div>	
+	</div>
+
+	<script type="text/javascript" src = "main.js"></script>
+</body>
+</html>

@@ -1,0 +1,166 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	background: #b0ebbf;
+}
+#story{
+	width: 100vh;
+	border: 1px solid #eee;
+	word-wrap: break-word;
+	padding: 10px;
+	line-height: 1.5;
+	color: #333;
+	background: #fff;
+	border-radius: 10px;
+	/*margin: 10% auto;*/
+}
+
+#correct{
+	background: #69c97c;
+	color: #fff;
+	margin: 10px;
+	padding: 10px;
+	font-family: Quicksand;
+	width: 100%;
+}
+#error{
+	background: #c96259;
+	color: #fff;
+	margin: 10px;
+	padding: 10px;
+	font-family: Quicksand;
+	width: 100%;
+}
+#timeLeft{
+	background: #61abba;
+	color: #fff;
+	margin: 10px;
+	padding: 10px;
+	font-family: Quicksand;
+	width: 100%;
+}
+#wordToType{
+	background: #e08358;
+	color: #fff;
+	margin: 10px;
+	padding: 10px;
+	font-family: Quicksand;
+	width: 100%;
+}
+#restart{
+	padding: 10px 15px;
+	background: #c74228;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+}
+#start{
+	padding: 10px 15px;
+	background: #61abba;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+}
+#start:hover{
+	background:#7dade3;
+}
+#story p{
+  display: inline;
+  padding: 5px;
+  font-family: Quicksand;
+}
+.typing-content{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   margin: 50px;
+}
+input{
+	/*background: #ded55f;*/
+	border: 1px solid #333;
+	color: #333;
+	margin: 10px;
+	padding: 10px;
+	font-family: Quicksand;
+	outline: none;
+	width: 300px;
+}
+.btn {
+  border-radius: 5px;
+  padding: 10px 15px;
+  text-decoration: none;
+  margin: 20px;
+  color: #fff;
+  position: relative;
+  display: inline-block;
+}
+select{
+  position: relative;
+  display: inline-block;	
+  margin: 20px;
+}
+
+.btn:active {
+  transform: translate(0px, 5px);
+  -webkit-transform: translate(0px, 5px);
+  box-shadow: 0px 1px 0px 0px;
+}
+.btn {
+  background-color: #9b59b6;
+  box-shadow: 0px 5px 0px 0px #82409D;
+}
+
+.btn:hover {
+  background-color: #B573D0;
+}
+/*.types {
+  background-color: #4287f5;
+  box-shadow: 0px 5px 0px 0px #1f6ae0;
+}
+
+.types:hover {
+  background-color: #6c9ff0;
+}*/
+.starter{
+	font-family: 'Quicksand', sans-serif;
+	color: #333;
+	background: red;
+}
+
+/* The Modal (background) */
+.starter,.gameover {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  font-family: Quicksand;
+}
+.gameover p{
+	font-family: Quicksand;
+	margin: 20px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  border: 1px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+}
+
+.modal-content div{
+	border-bottom: 1px solid #eee;
+	padding-bottom: 5px;
+	background: #4287f5;
+	color: #fff;
+	padding: 10px;
+}	
