@@ -23,7 +23,8 @@ body{
 	margin: 10px;
 	padding: 10px;
 	font-family: Quicksand;
-	width: 100%;
+	max-width: 100%;
+	border: 3px solid #fff;
 }
 #error{
 	background: #c96259;
@@ -31,7 +32,8 @@ body{
 	margin: 10px;
 	padding: 10px;
 	font-family: Quicksand;
-	width: 100%;
+	max-width: 100%;
+	border: 3px solid #fff;
 }
 #timeLeft{
 	background: #61abba;
@@ -39,7 +41,8 @@ body{
 	margin: 10px;
 	padding: 10px;
 	font-family: Quicksand;
-	min-width: 100%;
+	max-width: 100%;
+	border: 3px solid #fff;
 }
 #wordToType{
 	background: #e08358;
@@ -47,7 +50,8 @@ body{
 	margin: 10px;
 	padding: 10px;
 	font-family: Quicksand;
-	width: 100%;
+	max-width: 100%;
+	border: 3px solid #fff;
 }
 #restart{
 	padding: 10px 15px;
@@ -55,6 +59,10 @@ body{
 	border: none;
 	color: #fff;
 	cursor: pointer;
+	border: 3px solid #fff;
+}
+#restart:hover{
+	background: #cf564c;
 }
 #start{
 	padding: 10px 15px;
@@ -62,6 +70,7 @@ body{
 	border: none;
 	color: #fff;
 	cursor: pointer;
+	border: 3px solid #fff;
 }
 #start:hover{
 	background:#7dade3;
