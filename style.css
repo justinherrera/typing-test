@@ -60,6 +60,7 @@ body{
 	color: #fff;
 	cursor: pointer;
 	border: 3px solid #fff;
+	outline: none;
 }
 #restart:hover{
 	background: #cf564c;
@@ -71,6 +72,7 @@ body{
 	color: #fff;
 	cursor: pointer;
 	border: 3px solid #fff;
+	outline: none;
 }
 #start:hover{
 	background:#7dade3;
@@ -166,10 +168,14 @@ select{
   width: 50%; /* Could be more or less, depending on screen size */
 }
 
-.modal-content div{
+.modal-content div:not(.gameover-restart){
 	border-bottom: 1px solid #eee;
 	padding-bottom: 5px;
 	background: #4287f5;
 	color: #fff;
 	padding: 10px;
 }	
+
+.gameover-restart{
+	margin: 0 auto;
+}

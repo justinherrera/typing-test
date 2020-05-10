@@ -4,6 +4,7 @@
 	<title>Typing Test</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<link href="https://fonts.googleapis.com/css2?family=Modak&family=Quicksand:wght@500&family=Raleway&display=swap" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
 </head>
 <body onload = "timerSelection()">
 
@@ -13,6 +14,15 @@
 			<a href="#" id="minute" class="btn" data-custom-value="60000">1 Minute</a>
 			<a href="#" id="minute" class="btn" data-custom-value="120000">2 Minutes</a>
 			<a href="#" id="minute" class="btn" data-custom-value="3000">3 Minutes</a>	<br>
+			<audio id="myAudio">
+			  <source src="assets/correct.mp3" type="audio/mpeg">
+			  Your browser does not support the audio element.
+			</audio>
+			<audio id="myAudio2">
+			 <source src="assets/wrong.mp3" type="audio/mpeg"> 
+			  Your browser does not support the audio element.
+			</audio>
+
 <!-- 			<a href="#" class="btn types" id="sentence">Sentence</a>
 			<a href="#" class="btn types" id="word">Word</a> -->
 			
@@ -42,10 +52,12 @@
 	<div class ="gameover">
 		<div class="modal-content">
 			<!-- text to display when game is over -->
-			<div style="background:#c96259">GameOver</div>
+			<div style="background:#c96259">GameOver! Note: <i>formula of wpm is not yet accurate</i></div>
 			<p class="wpm">WPM: </p>
 			<p class="acc">Accuracy: </p>
 			<p class="error">Errors: 0</p>
+			<div class = "gameover-restart"></div>
+			<!-- <canvas id="myChart" width="50" height="50"></canvas> -->
 		</div>	
 	</div>
 

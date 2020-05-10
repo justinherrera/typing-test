@@ -61,6 +61,7 @@ let started = false
 let wpmOver = document.querySelector(".wpm");
 let accOver = document.querySelector(".acc");
 let errorOver = document.querySelector(".error");
+let datas = []
 
 
 // this function is going to be called after the page is loaded
@@ -99,6 +100,7 @@ function init(reset=false){
 // input event 
 function startType(){
 	let inputValue = ""
+	let wpmResult = 0
 	console.log(status)
 	input.addEventListener('keydown',function(event){
 		started = true
@@ -121,11 +123,13 @@ function startType(){
 				if(inputValue == array[iterator]){
 					elem.style.background = "#69c97c"
 					elem.style.color = "#fff"
+					sound("correct")
 					correctArray.push(inputValue)
 					iterator++
 				}else{ 
 					elem.style.background = "#c96259"
 					elem.style.color = "#fff"
+					sound()
 					errorArray.push(inputValue)	
 					iterator++ 
 				}	
@@ -135,8 +139,10 @@ function startType(){
 	      	error.textContent = 'Errors: '+errorArray.length
 
 	      	// Count the number and display on modal when game is over
-	      	let wpmResult = correctArray.length / 5;
+	      	let allTyped = correctArray.length + errorArray.length
+	      	wpmResult = allTyped / 5;
 	      	wpmOver.textContent = 'WPM: '+wpmResult
+	      	datas.push(wpmResult)
 	      	errorOver.textContent = 'Errors: '+errorArray.length
 	      	let accuracyResult = correctArray.length/array.length * 100
 	      	accOver.textContent = 'Accuracy: '+accuracyResult.toFixed(2)+"%"
@@ -177,12 +183,21 @@ start.addEventListener('click',function(){
 	this.setAttribute("id","restart")
 	// Restart Button
 	let restart = document.querySelector('#restart')
-	restart.addEventListener('click',() => init(true))
+	let gameoverRestart = document.querySelector('.gameover-restart')
+	let newButton = document.createElement('button')
+	newButton.textContent = 'Restart'
+	newButton.id = 'restart'
+	gameoverRestart.appendChild(newButton)
+	gameoverRestart.addEventListener('click',() => init(true)) // for modal when the game has ended
+	restart.addEventListener('click',() => init(true)) // when the game is currently playing
 })
 
 // this function will be called when the word reaches the end or the time went out
 function gameOver(){
 	gameover.style.display = "block";
+	console.log(datas[datas.length-1])
+	
+
 }
 
 function convertMiliseconds(miliseconds, format) {
@@ -210,3 +225,16 @@ function convertMiliseconds(miliseconds, format) {
 		return { d: days, h: hours, m: minutes, s: seconds };
   }
 };
+
+
+var x = document.getElementById("myAudio"); 
+var y = document.getElementById("myAudio2"); 
+function sound(which) {
+	if(which == "correct"){
+		x.currentTime=0;
+		x.play(); 
+	}else{
+		y.currentTime=0;
+		y.play(); 
+	}
+}
